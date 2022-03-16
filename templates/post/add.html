@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Add your post {% endblock %}
+
+{% block content %}
+
+<div class="post-add-form">
+    <div>
+        <h2 class="post-form-text">Add your post</h2>
+    </div>
+    <div class="post-form-input">
+        <form method="POST" class="form-input">
+            {{ form.hidden_tag() }}
+
+            {% for field in form if field.widget.input_type != 'hidden' %}
+
+            {% for error in field.errors %}
+            <span class="text-danger">{{ error }}</span>
+            {% endfor %}
+
+            {{ field.label(class="post-form-label") }}
+            {{field (placeholder=field.label.text, class="post-form-control") }}
+
+            {% endfor %}
+            <div class="post-btns-group">
+                <a href="/community/{{commu.id}}" class="post-btns">Back</a>
+                <button class="post-btns">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

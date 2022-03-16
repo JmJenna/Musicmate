@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} {{user.username}}'s communities {% endblock %}
+
+{% block content %}
+
+<div class="user_profile">
+  <div>
+    <h1>{{user.username.upper()}}'s MusicMate</h1>
+  </div>
+
+  <div class="user_commu_group">
+    {% for commu in user.communities %}
+    <a href="/community/{{commu.id}}" class="user_commu">
+      {{commu.genre}}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

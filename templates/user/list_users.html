@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} {{commu.genre}} members {% endblock %}
+
+{% block content %}
+<div class="all-list-user-group">
+    <div>
+        <h1>{{commu.genre}} members</h1>
+        <a href="/community/{{commu.id}}" class="genre-btn">Back</a>
+    </div>
+    <div class="list-show-user-profile">
+        {% for user in users%}
+        <div class="show-commu-profile">
+            <div class="user-picture">
+                <div>
+                    <img src="{{user.image_url}}" alt="profile image" height="150px" width="150px">
+                </div>
+                <div>@ {{user.username}}</div>
+            </div>
+
+            <ul class="profile-list">
+                <li class="list-set">
+                    <p>Playlist</p>
+                    <h4><a href="/users/{{user.id}}/playlist" class="list-num">{{user.songs | length }}</a></h4>
+                </li>
+                <li class="list-set">
+                    <p>Posts</p>
+                    <h4><a href="/users/{{user.id}}/posts" class="list-num">{{user.posts | length }}</a></h4>
+                </li>
+                <li class="list-set">
+                    <p>Likes</p>
+                    <h4><a href="/users/{{user.id}}/likes" class="list-num">{{user.likes | length }}</a></h4>
+                </li>
+            </ul>
+
+            {% if user.id == g.user.id %}
+            <li class="add-post-btn"> <a href="/users/{{user.id}}/profile">Edit profile</a> </li>
+            <li class="delete-post-btn"> <a href="/users/{{user.id}}/delete">Delete profile</a> </li>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

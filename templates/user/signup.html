@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Sign up - MusicMate {% endblock %}
+
+{% block content %}
+
+<div class="form-all">
+    <h2 class="form-text">Sign up to be a music mate</h2>
+    <form method="POST" class="form-input">
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+
+        {% for error in field.errors %}
+        <span class="text-danger">{{ error }}</span>
+        {% endfor %}
+
+        {{ field.label(class="form-label") }}
+        {{field (placeholder=field.label.text, class="form-control") }}
+        {% endfor %}
+        <button class="form-btn">Sign up</button>
+    </form>
+    <div>Have an account? <a href="/login" class="btn-a">Log in</a></div>
+</div>
+
+{% endblock %}

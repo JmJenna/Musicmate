@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %} {{user.username}}'s Posts {% endblock %}
+
+{% block content %}
+<div class="main-page">
+<div>
+    <div>
+        <h1>{{user.username.upper()}}'s Posts</h1>
+    </div>
+    {% for post in user.posts %}
+    <div class="posts">
+        {% for song in user.songs %}
+        {% if song.id == post.song_id %}
+        <div class="post-user">
+            <a href="/community/{{post.commu_id}}">{{post.communities.genre}} </a>
+        </div>
+        <div class="post-spotify">
+            <a href="{{ song.link }}" target="_blank">
+                <img src="{{ song.images }}" alt="{{ song.title }} album image" height="150px" width="150px" />
+            </a>
+            <div class="post-song-info">
+                <h3>
+                    <a href="{{ song.link }}" target="_blank">{{ song.title }}</a>
+                </h3>
+                <h4>
+                    <a href="{{ song.link }}" target="_blank"> {{ song.artist }}</a>
+                </h4>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        <div class="post-all-contents">
+            <div class="post-title-contents">
+                <div class="title"> {{post.title}} </div>
+                <div class="content"> {{post.content}} </div>
+            </div>
+
+            <div class="post-user-date">
+                <div class="post-user"> <a href="/users/{{post.user_id}}">@ {{post.users.username}} </a>
+                </div>
+                <div> {{ post.timestamp.strftime('%d %B %Y') }} </div>
+            </div>
+        </div>
+
+        <div class="post-group-btn">
+            {% if post.user_id == g.user.id %}
+            <a href="/posts/{{post.id}}/edit" class="post-btn">Edit</a>
+            <a href="/posts/{{post.id}}/community/{{post.commu_id}}/delete" class="post-btn">Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+</div>
+{% endblock %}

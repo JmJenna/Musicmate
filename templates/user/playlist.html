@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %} {{user.username}}'s Playlist {% endblock %}
+
+{% block content %}
+<div class="main-page">
+    <div class="playlist-column">
+        <div>
+            <h1> {{user.username.upper()}}'s Playlist ( {{user.songs | length }} )</h1>
+        </div>
+
+            <div class="show-playlist-group">
+                
+                {% for song in songs %}
+                <div class="show-playlist">
+                    <div class="show-playlist-image">
+                        <a href="{{ song.link }}" target="_blank">
+                            <img src="{{ song.images }}" alt="{{ song.title }} album image" height="160px"
+                                width="160px" />
+                        </a>
+                    </div>
+
+                    <div class="show-playlist-content">
+                        <h3>
+                            <a href="{{ song.link }}" target="_blank">{{ song.title }}</a>
+                        </h3>
+                        <h4>
+                            <a href="{{ song.link }}" target="_blank"> {{ song.artist }}</a>
+                        </h4>
+                        {% if g.user.id == user.id %}
+                        <div class="show-song-btn">
+                            <a href="/users/{{user.id}}/playlist/{{song.id}}/delete" class="song-btn">Delete</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+    </div>
+</div>
+{% endblock %}

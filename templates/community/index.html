@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} MusicMate {% endblock %}
+
+{% block content %}
+
+<div class="genre">
+    {% for commu in community %}
+    <div class="genre_group">
+        <a href="/community/{{commu.id}}">
+            {{ commu.genre}}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

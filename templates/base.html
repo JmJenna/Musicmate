@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d8fd00a690.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/home.css">
+  <link rel="shortcut icon" type="image⁄x-icon" href="/static/images/logo.png">
+  <title class="fa-solid fa-music">{% block title %}Welcome to MusicMate{% endblock %}</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/">
+        <i class="fa-solid fa-music">        
+        </i>
+        <span>MusicMate</span>
+      </a>
+    </div>
+
+    <ul class="nav-menu">
+
+        <form action="/search" class="search">
+          <input type="text" placeholder="Search Music" name="artist" id="search-music">
+          <button class="search-btn-icon"><i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>          
+      
+      {% if not g.user %}
+      <li>
+        <a href="/signup" class="btn-a">SIGN UP</a>
+      </li>
+      <li>
+        <a href="/login" class="btn-a">LOG IN</a>
+      </li>
+      {% else %}
+      <li class="topMenuLi">
+        <a href="/" class="btn-a menulink"><i class="fa-solid fa-user"></i>
+          {{ g.user.username.upper() }}
+          <i class="fa-solid fa-sort-down"></i>
+        </a>
+
+        <ul class="submenu">
+          <li class="user-memu">
+            <a href="/users/{{g.user.id}}">Profile</a>
+            <a href="/users/{{g.user.id}}/communities">Community</a>
+            <a href="/users/{{g.user.id}}/playlist">Playlist</a>
+          </li>
+        </ul>
+
+      </li>
+      <li>
+        <a href="/logout" class="btn-a">LOG OUT</a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <a href="" class="navbar-toogleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+  </nav>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <div class="info-container">
+      <div class="jeongmin">
+        &copy; Jeongmin Choi
+      </div>
+      <div class="jenna-info">
+        <a href="https://github.com/JmJenna"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jenna-jeongmin-choi-84716419a/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+<script src="/static/app.js"></script>
+</body>
+
+</html>

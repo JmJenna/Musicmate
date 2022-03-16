@@ -1,0 +1,739 @@
+/******************** base.html ***************************/
+html, body {
+    margin: 0px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-a:hover {
+    color : rgb(245, 73, 42);
+}
+
+.navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3vh 4.6vh;
+}
+
+.logo {
+    font-size: 4vh;
+    font-weight: 65vh;
+}
+
+.logo i {
+    color: rgb(245, 73, 42);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-right: 1.2vh;
+    font-size: 3.5vh;
+    font-weight: 65vh;
+}
+
+.nav-menu li {
+    padding : 1.6vh 2vh;
+}
+
+.search-btn-icon{
+    background-color: transparent;
+    margin-left: -5vh;
+    padding: 1.3vh;
+    font-size: 3vh;
+    color: rgb(245, 73, 42);
+    border : 0;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 3.2vh;
+}
+
+#search-music {
+    padding: 2.3vh 4.3vh 2.3vh 3vh;
+    border-radius: 1.5vh;
+    border : 0 ;
+}
+
+.topMenuLi{
+    display:block;
+}
+
+.submenu{
+    display: none;
+    list-style: none;
+}
+
+.topMenuLi:hover .submenu{
+  display: block;
+  position: absolute; 
+  justify-content: center;  
+  margin-top: 0.3vh;
+  font-size: 3vh;
+}
+
+.topMenuLi:hover .user-memu a{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin-left: -2.4vh;
+    transform: scale(1.0);
+    color:black;
+    padding: 0.8vh;
+}
+
+.topMenuLi:hover .user-memu a:hover{
+    color:rgb(245, 73, 42);
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+main {
+    height: 160vh;
+    max-height: auto;
+    background-size: cover;
+    background-color: rgb(255, 148, 129);
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.main-page {
+    height: 160vh;
+    background-color: rgb(255, 148, 129);
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    margin-top:25vh;
+}
+
+.headline {
+    color : rgb(245, 73, 42);
+    font-size: 10vh;
+    font-weight: 900;
+    position: relative;
+    left: 33vh;
+    padding-bottom: 6.5vh;
+}
+
+.headline-first {
+    position: relative;
+    left: -2.5em;
+}
+
+.btn-community{
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    color : white;
+    background-color: rgb(245, 73, 42);
+    font-weight: 400px;
+    border-radius: 35px;
+    left: 400px;
+}
+
+.btn-community:hover{
+    transform: scale(1.1);
+    color: white;
+}
+
+footer {
+    height: 150px;
+    background-color: black;
+}
+
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color : white;
+    padding-top:50px;
+}
+
+
+.jenna-info {
+    padding-top:10px;
+    font-size: 24px;
+}
+
+
+.jenna-info a:hover{
+    color :rgb(245, 73, 42);
+}
+
+
+.logo-signup{
+   color: black;
+   font-size: 30px;
+}
+
+/******************** form.html ***************************/
+
+
+.form-all {
+    background-color: rgba(253, 199, 190, 0.7);
+    border-radius: 15px;
+    margin-top: 100px;
+    width: 500px;
+    height: 600px;
+    font-weight: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input {
+    display: flex ;
+    flex-direction: column ;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.form-text {
+    font-size: 30px;
+    color:rgb(245, 73, 42);
+}
+
+.form-control {
+  align-items: center;
+  width: 300px;
+  height: 28px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(253, 199, 190);
+  background-color: white;
+}  
+  
+
+.form-label {
+    font-size : 15px;
+    margin-bottom: 5px;
+}
+
+.form-btn {
+    margin: 18px 0px 10px 60px;
+    border-radius: 50px;
+    width: 180px;
+    padding : 20px;
+    color: white;
+    background-color: rgb(245, 73, 42);
+}
+
+.form-btn:hover{
+    transform: scale(1.1);
+}
+
+/******************** POST - ADD / EDIT .html ***************************/
+.post-form-text{
+    color: black;
+    font-size: 30px;
+}
+
+.post-add-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; 
+}
+
+.post-form-label{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(245, 73, 42);
+}
+
+.post-form-control{   
+  margin-bottom: 25px;
+  width: 800px;
+  height: auto;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+.post-form-input{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(253, 199, 190, 0.7);
+}
+
+.post-btns-group{
+    display: flex;
+    justify-content: center;
+}
+.post-btns {
+    margin: 18px 0px 10px 10px;
+    border-radius: 10px;
+    padding : 10px;
+    color: white;
+    background-color: rgb(245, 73, 42);
+    font-size: 18px;
+}
+
+.post-btns:hover{
+    transform: scale(1.05);
+}
+
+/******************** search.html ***************************/
+ .spotify-search-res {
+    margin-top: 6px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 6 px;
+    display: flex;  
+}
+
+.song-info {
+    margin-left: 10px;
+}
+
+.song-btn {
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(245, 73, 42);
+    padding : 4px;
+    border: none;
+}
+
+.song-btn:hover{
+    background-color: rgb(245, 73, 42);
+    color: white;
+}
+
+
+/******************** community.html ***************************/
+
+.genre {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ margin-left: 300px;
+ margin-right: 300px;
+}
+ 
+
+.genre_group {
+    margin-top: 17px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 500px;
+    font-size: 40px;
+    background-color: rgb(245, 73, 42,0.3); 
+}
+
+.commu-btn{
+  background-color: Transparent;
+}
+
+/******************** first_page.html ***************************/
+
+.post-group-form{
+    display:flex;
+    flex-direction: column;
+}
+
+.commu_group {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.commu-name{
+    margin: 0px 0px 3px 0px;
+}
+.commu_group h1{
+    margin-left: 13px;
+}
+
+.commu-btn{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+
+.genre-btn{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.musicmate-btn:hover {
+    color: white;
+}
+
+.posts {
+    width: 1000px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.title {
+    color: white;
+    font-size: 20px;
+}
+
+.post-all-contents{
+    margin-top:10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.post-title-contents{
+   width: 75%;
+}
+
+.content  span{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.post-group-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+}
+
+.post-btn {
+    background-color: lightgray;
+    color : black;
+    height: 25px;
+    width: 50px;
+    border-radius: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    padding-top: 5px;
+    padding-bottom: -8px;
+}
+
+.post-user-date{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    width: 25%;
+}
+
+.post-user{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.post-user:hover{
+ text-decoration: underline;
+}
+
+.post-spotify{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.post-song-info{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-left:10px;
+}
+
+.like-btn{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dislike-btn{
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/******************** user/porofile.html ***************************/
+.user_profile{
+  align-items: center;
+  text-align: center;
+}
+
+.user_commu_group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.user_commu{
+    margin-top: 13px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 500px;
+    font-size: 40px;
+    background-color: rgb(245, 73, 42,0.3); 
+}
+
+.user_commu:hover{
+    transform: scale(1.05);
+}
+
+/******************** first_page.html for user profile ***************************/    
+
+.commu-profile{
+    position:absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    width: 250px;
+    height: 400px;
+    align-items: center;
+    top: 295px;
+    left:50px;
+    color: black;
+}
+
+.profile-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-right: 15px;
+}
+
+.user-picture{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: 900;
+    align-items: center;
+}
+
+.user-info a{
+    transform: scale(1.0);
+}
+
+.list-set {
+  margin-right: 30px;
+  text-align: center;
+}
+
+.list-num{
+    font-size: 25px;
+    text-align: center;
+}
+
+.list-num:hover{
+    text-decoration: underline;
+}
+
+h4{
+    margin :0px;
+}
+
+.add-post-btn {
+    list-style: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 8px;
+}
+
+.add-post-btn a{
+    width: 30px;
+}
+
+.add-post-btn:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/******************** show_profile.html ***************************/
+
+.show-commu-profile{
+    position: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    width: 250px;
+    height: 430px;
+    align-items: center;
+    color: black;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    margin-right:10px;
+}
+
+.show-user-profile{
+    margin-top: 20px;
+}
+
+.delete-post-btn{
+    list-style: none;
+    text-align: center;
+    background-color: rgba(240, 32, 32, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 8px;
+}
+
+.delete-post-btn:hover{
+    background-color: rgba(240, 32, 32, 0.7);
+}
+
+/******************** list_users.html ***************************/
+
+.list-show-user-profile{
+    display: flex;
+    margin-top: 30px;
+}
+
+
+.all-list-user-group{
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/******************** playlist.html ***************************/
+
+.playlist-column{
+    text-align: center;
+}
+
+.show-playlist-group{
+ display: flex;
+ justify-content: center;
+ width: 1400px;
+ height: 960px;
+ flex-wrap:wrap;
+ float: left;
+}
+
+
+.show-playlist {
+    margin-top: 10px;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5px;
+     height: 320px;
+     width: 210px;
+     margin-right: 10px;
+     padding:8px;
+}
+
+.show-playlist-image:hover {
+  transform: scale(1.05);
+}
+
+.show-playlist-content{
+    text-align: left;
+}
+
+.show-song-btn {
+    margin-top: 12px;
+ }
+
+.navbar-toogleBtn{
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 4vh;
+    color: rgb(245, 73, 42);
+} 
+ 
+ @media screen and (max-width:768px){
+   .navbar {
+       flex-direction: flex;
+       align-items: flex-start;
+   }
+
+   .logo a{
+    display: flex;
+   }
+
+   .search-btn-box{
+       display: flex;
+       border: 1px solid red;
+       margin-right: -100vh;
+
+   }
+
+   .nav-menu{
+       display: none; 
+       flex-direction: column;
+       align-items: center;
+       width: 100%;
+   }
+   
+   .search-btn{
+       display: flex;
+   }
+
+   .nav-menu li{
+       width :100%;
+       text-align: center;
+   }
+   
+   .navbar-toogleBtn{
+       display: block;
+   }
+   
+   .nav-menu.active{
+       display: flex;
+   }
+   
+   
+   footer{
+       justify-content: center;
+       width: 100%;
+   }
+} 

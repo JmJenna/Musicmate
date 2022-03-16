@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} MusciMate {% endblock %}
+
+{% block content %}
+<div class="main-page">
+  <div class="spotify-search-results">
+    {% for track in tracks %}
+    <div class="spotify-search-res">
+      <a href="{{ track['album']['external_urls']['spotify'] }}" target="_blank">
+        <img src="{{ track['album']['images'][1]['url'] }}" alt="{{ track['album']['name'] }} album image"
+          height="150px" width="150px" />
+      </a>
+
+      <div class="song-info">
+        <h3>
+          <a href="{{ track['external_urls']['spotify'] }}" target="_blank">{{ track['name'] }}</a>
+          {% if track['preview_url'] %}<a href="{{ track['preview_url'] }}" target="_blank"><i
+              class="far fa-play-circle"></i></a>{% endif %}
+        </h3>
+        <h4>
+          <a href="{{ track['artists'][0]['external_urls']['spotify'] }}" target="_blank"> {{
+            track['artists'][0]['name'] }}</a>
+        </h4>
+
+        <form action="" method="POST">
+          <input type="hidden" name="track_image" value="{{ track['album']['images'][1]['url'] }}" />
+          <input type="hidden" name="track_title" value="{{ track['name'] }}" />
+          <input type="hidden" name="track_artist" value="{{ track['artists'][0]['name'] }}" />
+          <input type="hidden" name="track_link" value="{{ track['external_urls']['spotify'] }}" />
+          <button type="submit" class="song-btn">Add to Playlist</button>
+        </form>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
