@@ -4,6 +4,7 @@
 {% block content %}
 <div class="main-page">
   <div class="spotify-search-results">
+    <h1> "{{q}}" results</h1>
     {% for track in tracks %}
     <div class="spotify-search-res">
       <a href="{{ track['album']['external_urls']['spotify'] }}" target="_blank">

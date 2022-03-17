@@ -20,12 +20,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.3vh 4.6vh;
+    padding: 8px 28px;
 }
 
 .logo {
-    font-size: 4vh;
-    font-weight: 65vh;
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .logo i {
@@ -37,22 +37,22 @@ a {
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding-right: 1.2vh;
-    font-size: 3.5vh;
-    font-weight: 65vh;
+    padding-right: 7px;
+    font-size: 21px;
+    font-weight: 400;
 }
 
 .nav-menu li {
-    padding : 1.6vh 2vh;
+    padding : 10px 12px;
 }
 
 .search-btn-icon{
     background-color: transparent;
-    margin-left: -5vh;
-    padding: 1.3vh;
-    font-size: 3vh;
+    padding: 8px;
+    font-size: 18px;
     color: rgb(245, 73, 42);
     border : 0;
+    margin-left: -40px;
 }
 
 .search {
@@ -60,12 +60,13 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0;
-  font-size: 3.2vh;
+  font-size: 20px;
+  margin-right: 5px;
 }
 
 #search-music {
-    padding: 2.3vh 4.3vh 2.3vh 3vh;
-    border-radius: 1.5vh;
+    padding: 14px 26px 14px 18px;
+    border-radius: 9px;
     border : 0 ;
 }
 
@@ -82,18 +83,18 @@ a {
   display: block;
   position: absolute; 
   justify-content: center;  
-  margin-top: 0.3vh;
-  font-size: 3vh;
+  margin-top: 2px;
+  font-size: 18px;
 }
 
 .topMenuLi:hover .user-memu a{
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    margin-left: -2.4vh;
+    margin-left: -14px;
     transform: scale(1.0);
     color:black;
-    padding: 0.8vh;
+    padding: 5px;
 }
 
 .topMenuLi:hover .user-memu a:hover{
@@ -105,7 +106,7 @@ a:hover {
 }
 
 main {
-    height: 160vh;
+    height: 960px;
     max-height: auto;
     background-size: cover;
     background-color: rgb(255, 148, 129);
@@ -115,28 +116,28 @@ main {
 }
 
 .main-page {
-    height: 160vh;
+    height: 960px;
     background-color: rgb(255, 148, 129);
     display: flex;
     justify-content: center;
 }
 
 .main-container {
-    margin-top:25vh;
+    margin-top: 150px;
 }
 
 .headline {
     color : rgb(245, 73, 42);
-    font-size: 10vh;
+    font-size: 60px;
     font-weight: 900;
-    position: relative;
-    left: 33vh;
-    padding-bottom: 6.5vh;
+    padding-bottom: 40px;
+    margin-right: -150px;
 }
 
 .headline-first {
     position: relative;
-    left: -2.5em;
+    left: -150px;
+
 }
 
 .btn-community{
@@ -148,7 +149,7 @@ main {
     background-color: rgb(245, 73, 42);
     font-weight: 400px;
     border-radius: 35px;
-    left: 400px;
+    left: 150px;
 }
 
 .btn-community:hover{
@@ -186,6 +187,7 @@ footer {
    color: black;
    font-size: 30px;
 }
+
 
 /******************** form.html ***************************/
 
@@ -240,6 +242,7 @@ footer {
     padding : 20px;
     color: white;
     background-color: rgb(245, 73, 42);
+    border: none;
 }
 
 .form-btn:hover{
@@ -291,6 +294,7 @@ footer {
     color: white;
     background-color: rgb(245, 73, 42);
     font-size: 18px;
+    border:none;
 }
 
 .post-btns:hover{
@@ -329,10 +333,8 @@ footer {
 
 .genre {
  display: flex;
- justify-content: space-between;
+ justify-content: center;
  flex-wrap: wrap;
- margin-left: 300px;
- margin-right: 300px;
 }
  
 
@@ -345,6 +347,7 @@ footer {
     height: 200px;
     width: 500px;
     font-size: 40px;
+    margin-left: 15px;
     background-color: rgb(245, 73, 42,0.3); 
 }
 
@@ -354,9 +357,17 @@ footer {
 
 /******************** first_page.html ***************************/
 
+
+.community-all-page{
+    display: flex;
+    border: 1px solid blue;
+}
+
 .post-group-form{
     display:flex;
     flex-direction: column;
+    margin-left: 50px;
+    width: 1000px;
 }
 
 .commu_group {
@@ -388,6 +399,7 @@ footer {
     padding: 15px;
     margin-right: 10px;
     margin-left: 3px;
+    border: none;
 }
 
 .musicmate-btn:hover {
@@ -479,11 +491,13 @@ footer {
 .like-btn{
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7);
+  border: none;
 }
 
 .dislike-btn{
     background-color: transparent;
     color: rgba(0, 0, 0, 0.7);
+    border: none;
 }
 
 /******************** user/porofile.html ***************************/
@@ -519,14 +533,13 @@ footer {
 /******************** first_page.html for user profile ***************************/    
 
 .commu-profile{
-    position:absolute;
+    margin-top: 200px;
+    margin-left: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     width: 250px;
     height: 400px;
     align-items: center;
-    top: 295px;
-    left:50px;
     color: black;
 }
 
@@ -690,50 +703,3 @@ h4{
     color: rgb(245, 73, 42);
 } 
  
- @media screen and (max-width:768px){
-   .navbar {
-       flex-direction: flex;
-       align-items: flex-start;
-   }
-
-   .logo a{
-    display: flex;
-   }
-
-   .search-btn-box{
-       display: flex;
-       border: 1px solid red;
-       margin-right: -100vh;
-
-   }
-
-   .nav-menu{
-       display: none; 
-       flex-direction: column;
-       align-items: center;
-       width: 100%;
-   }
-   
-   .search-btn{
-       display: flex;
-   }
-
-   .nav-menu li{
-       width :100%;
-       text-align: center;
-   }
-   
-   .navbar-toogleBtn{
-       display: block;
-   }
-   
-   .nav-menu.active{
-       display: flex;
-   }
-   
-   
-   footer{
-       justify-content: center;
-       width: 100%;
-   }
-} 

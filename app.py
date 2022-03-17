@@ -301,7 +301,7 @@ def search_song():
             db.session.commit()
 
     
-        return render_template('user/search.html', tracks=tracks , user=user)
+        return render_template('user/search.html', tracks=tracks , user=user , q=q)
 
 ##############################################################################
 # Show user page (profile , posts , communities)

@@ -4,124 +4,127 @@
 {% block content %}
 
 <div class="main-page">
-
-    <div class="commu-profile">
-        <div class="user-picture">
-            <a href="/users/{{user.id}}" class="user-info">
-                <div>
-                    <img src="{{user.image_url}}" alt="profile image" height="150px" width="150px">
-                </div>
-                <div>@ {{user.username}}</div>
-            </a>
-        </div>
-
-        <ul class="profile-list">
-            <li class="list-set">
-                <p>Playlist</p>
-                <h4><a href="/users/{{user.id}}/playlist" class="list-num">{{user.songs | length }}</a></h4>
-            </li>
-            <li class="list-set">
-                <p>Posts</p>
-                <h4><a href="/users/{{user.id}}/posts" class="list-num">{{user.posts | length }}</a></h4>
-            </li>
-            <li class="list-set">
-                <p>Likes</p>
-                <h4><a href="/users/{{user.id}}/likes" class="list-num">{{user.likes | length }}</a></h4>
-            </li>
-        </ul>
-
-        {% for u in user.communities %}
-        {% if u.genre == community.genre %}
-        <li class="add-post-btn"> <a href="/community/{{community.id}}/posts/add">Add Post</a> </li>
-        {% endif %}
-        {% endfor %}
-    </div>
-
-    <div class="post-group-form">
-        <div class="commu_group">
-            <h1 class="commu-name"> {{community.genre}}</h1>
-            <div>
-                <a href="/community/{{community.id}}/users" class="post-user">
-                    <i>{{community.users | length }} members</i>
-            </div>
-            </a>
-            <ul class="commu-btn">
-                <li class="genre-btn"><a href="/community">Back</a></li>
-                {% if community.genre not in user.communities|map(attribute="genre") %}
-                <li>
-                    <form action="" method="POST">
-                        <input type="hidden" name="user_id" value="{{user.id}}" />
-                        <input type="hidden" name="commu_id" value="{{community.id}}" />
-                        <button class="genre-btn musicmate-btn" type="submit" name="join">
-                            Join {{community.genre}}
-                        </button>
-                    </form>
-                </li>
-                {% else %}
-                <li class="genre-btn"><a href="/community/{{community.id}}/user/{{user.id}}/delete">Leave
-                        {{community.genre}}</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-
-        {% for post in posts %}
-        {% if community.id == post.commu_id %}
-        {% for u in user.communities %}
-        {% if u.genre == community.genre %}
-
-        <div class="posts">
-            {% for song in songs %}
-            {% if song.id == post.song_id %}
-            <div class="post-spotify">
-                <a href="{{ song.link }}" target="_blank">
-                    <img src="{{ song.images }}" alt="{{ song.title }} album image" height="80px" width="80px" />
+    <div class="community-all-page">
+        <div class="commu-profile">
+            <div class="user-picture">
+                <a href="/users/{{user.id}}" class="user-info">
+                    <div>
+                        <img src="{{user.image_url}}" alt="profile image" height="150px" width="150px">
+                    </div>
+                    <div>@ {{user.username}}</div>
                 </a>
-                <div class="post-song-info">
-                    <h3>
-                        <a href="{{ song.link }}" target="_blank">{{ song.title }}</a>
-                    </h3>
-                    <h4>
-                        <a href="{{ song.link }}" target="_blank"> {{ song.artist }}</a>
-                    </h4>
-                </div>
             </div>
+
+            <ul class="profile-list">
+                <li class="list-set">
+                    <p>Playlist</p>
+                    <h4><a href="/users/{{user.id}}/playlist" class="list-num">{{user.songs | length }}</a></h4>
+                </li>
+                <li class="list-set">
+                    <p>Posts</p>
+                    <h4><a href="/users/{{user.id}}/posts" class="list-num">{{user.posts | length }}</a></h4>
+                </li>
+                <li class="list-set">
+                    <p>Likes</p>
+                    <h4><a href="/users/{{user.id}}/likes" class="list-num">{{user.likes | length }}</a></h4>
+                </li>
+            </ul>
+
+            {% for u in user.communities %}
+            {% if u.genre == community.genre %}
+            <li class="add-post-btn"> <a href="/community/{{community.id}}/posts/add">Add Post</a> </li>
             {% endif %}
             {% endfor %}
+        </div>
 
-            <div class="post-all-contents">
-                <div class="post-title-contents">
-                    <div class="title"> <i>{{post.title}}</i> </div>
-                    <div class="content"> {{post.content}} </div>
+        <div class="post-group-form">
+            <div class="commu_group">
+                <h1 class="commu-name"> {{community.genre}}</h1>
+                <div>
+                    <a href="/community/{{community.id}}/users" class="post-user">
+                        <i>{{community.users | length }} members</i>
                 </div>
+                </a>
+                <ul class="commu-btn">
+                    <li class="genre-btn"><a href="/community">Back</a></li>
+                    {% if community.genre not in user.communities|map(attribute="genre") %}
+                    <li>
+                        <form action="" method="POST">
+                            <input type="hidden" name="user_id" value="{{user.id}}" />
+                            <input type="hidden" name="commu_id" value="{{community.id}}" />
+                            <button class="genre-btn musicmate-btn" type="submit" name="join">
+                                Join {{community.genre}}
+                            </button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li class="genre-btn"><a href="/community/{{community.id}}/user/{{user.id}}/delete">Leave
+                            {{community.genre}}</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
 
-                <div class="post-user-date">
-                    <form method="POST" action="/posts/{{ post.id }}/likes" id="messages-form">
 
-                        <button class="                                     
+            {% for post in posts %}
+            {% if community.id == post.commu_id %}
+            {% for u in user.communities %}
+            {% if u.genre == community.genre %}
+
+            <div class="posts">
+                {% for song in songs %}
+                {% if song.id == post.song_id %}
+                <div class="post-spotify">
+                    <a href="{{ song.link }}" target="_blank">
+                        <img src="{{ song.images }}" alt="{{ song.title }} album image" height="80px" width="80px" />
+                    </a>
+                    <div class="post-song-info">
+                        <h3>
+                            <a href="{{ song.link }}" target="_blank">{{ song.title }}</a>
+                        </h3>
+                        <h4>
+                            <a href="{{ song.link }}" target="_blank"> {{ song.artist }}</a>
+                        </h4>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+                <div class="post-all-contents">
+                    <div class="post-title-contents">
+                        <div class="title"> <i>{{post.title}}</i> </div>
+                        <div class="content"> {{post.content}} </div>
+                    </div>
+
+                    <div class="post-user-date">
+                        <form method="POST" action="/posts/{{ post.id }}/likes" id="messages-form">
+
+                            <button class="                                     
                           {{'like-btn' if post in likes else 'dislike-btn'}}">
 
-                            <i class="fa fa-thumbs-up"></i> <span>{{post.likes | length }}</span>
-                        </button>
-                    </form>
-                    <div class="post-user"> <a href="/users/{{post.user_id}}">@ {{post.users.username}} </a>
+                                <i class="fa fa-thumbs-up"></i> <span>{{post.likes | length }}</span>
+                            </button>
+                        </form>
+                        <div class="post-user"> <a href="/users/{{post.user_id}}">@ {{post.users.username}} </a>
+                        </div>
+                        <div> {{ post.timestamp.strftime('%d %B %Y') }} </div>
                     </div>
-                    <div> {{ post.timestamp.strftime('%d %B %Y') }} </div>
                 </div>
-            </div>
 
-            <div class="post-group-btn">
-                {% if post.user_id == g.user.id %}
-                <a href="/posts/{{post.id}}/edit" class="post-btn">Edit</a>
-                <a href="/posts/{{post.id}}/community/{{community.id}}/delete" class="post-btn">Delete</a>
+                <div class="post-group-btn">
+                    {% if post.user_id == g.user.id %}
+                    <a href="/posts/{{post.id}}/edit" class="post-btn">Edit</a>
+                    <a href="/posts/{{post.id}}/community/{{community.id}}/delete" class="post-btn">Delete</a>
+                    {% endif %}
+                </div>
+
                 {% endif %}
+                {% endfor %}
             </div>
 
             {% endif %}
             {% endfor %}
         </div>
-        {% endif %}
-        {% endfor %}
     </div>
 </div>
 
