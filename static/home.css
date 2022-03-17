@@ -188,7 +188,6 @@ footer {
    font-size: 30px;
 }
 
-
 /******************** form.html ***************************/
 
 
@@ -360,12 +359,13 @@ footer {
 
 .community-all-page{
     display: flex;
+    width: 100%;
 }
 
 .post-group-form{
     display:flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 30px;
     width: 1000px;
 }
 
@@ -399,6 +399,10 @@ footer {
     margin-right: 10px;
     margin-left: 3px;
     border: none;
+}
+
+.musicmate-btn{
+    color: rgb(245, 73, 42);
 }
 
 .musicmate-btn:hover {
@@ -533,7 +537,6 @@ footer {
 
 .commu-profile{
     margin-top: 200px;
-    margin-left: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     width: 250px;
