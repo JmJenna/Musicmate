@@ -356,6 +356,23 @@ footer {
 
 /******************** first_page.html ***************************/
 
+.all-community{
+    display: flex;
+    justify-content: center;
+}
+
+.all-community ul{
+    list-style: none;
+}
+
+.all-community li{
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(245, 73, 42);
+}
+
 
 .community-all-page{
     display: flex;
@@ -389,6 +406,7 @@ footer {
     display: flex;
     justify-content: center;
     list-style: none;
+    margin-left: -10px;
 }
 
 

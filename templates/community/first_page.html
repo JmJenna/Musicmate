@@ -37,6 +37,7 @@
             {% endfor %}
         </div>
 
+
         <div class="post-group-form">
             <div class="commu_group">
                 <h1 class="commu-name"> {{community.genre}}</h1>
@@ -46,7 +47,6 @@
                 </div>
                 </a>
                 <ul class="commu-btn">
-                    <li class="genre-btn"><a href="/community">Back</a></li>
                     {% if community.genre not in user.communities|map(attribute="genre") %}
                     <li>
                         <form action="" method="POST">
@@ -65,6 +65,15 @@
                 </ul>
             </div>
 
+            <div class="all-community">
+                {% for all in all_commu %}
+                {% if all.genre != community.genre %}
+                <ul>
+                    <li> <a href="/community/{{all.id}}" class="btn-a"> {{ all.genre }} </a> </li>
+                    {% endif %}
+                </ul>
+                {% endfor%}
+            </div>
 
             {% for post in posts %}
             {% if community.id == post.commu_id %}

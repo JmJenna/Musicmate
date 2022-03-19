@@ -185,7 +185,7 @@ class Song(db.Model):
 
     artist = db.Column(db.Text, nullable=False)
     
-    images = db.Column(db.Text , nullable=True)
+    images = db.Column(db.Text , nullable=True, unique=True)
 
     title = db.Column(db.Text , nullable=False)
 
