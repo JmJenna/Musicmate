@@ -156,8 +156,9 @@ def one_community(com_id):
             db.session.commit()
 
     usercommu = UserCommu.query.all()
+    all_commu = Community.query.all()
 
-    return render_template('/community/first_page.html', community=community , posts=posts, user=user, likes=user.likes, usercommu=usercommu, songs=songs)  
+    return render_template('/community/first_page.html',all_commu = all_commu, community=community , posts=posts, user=user, likes=user.likes, usercommu=usercommu, songs=songs)  
     
 
 @app.route('/community/<int:com_id>/user/<int:user_id>/delete', methods=['GET','POST'])      
