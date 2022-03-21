@@ -8,17 +8,12 @@
 
 # 🎵 What is Musicmate?
 ### Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. 
-### Users have to sign up first before they use the website. They are able to search any songs by artists or titles. They could add the song into their playlist. 
-### They could join any of communities created by genre as much as they do want.
-### Once they joined, they are allowed to see the posts and create a post. 
-### Also, users can see who has joined this community. 
-### Users can like any posts not their own posts.
-### Some information such as playlist, their own posts and their liked posts shows up in their profile.
-
 
 # ⚙️ Deployment ( ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) )
+### This application is deployed on Heroku.
 
 # 💾 Database schema ( ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)  )
 ![MusicMate database](https://user-images.githubusercontent.com/92393205/159342373-8fceab98-db0a-4156-b2c7-30d74641d71b.png)
+### I used Spotify API for users to search music and add the song into their playlist. 
 
 # 📷 Screenshots
