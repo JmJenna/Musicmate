@@ -4,7 +4,7 @@
 
 
 # 🎵 What is Musicmate?
-### Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. 
+<p> Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. </p>
 
 
 
@@ -17,20 +17,20 @@
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
 <ul> 
-  <li> Front-end 
+  <li>**Front-end** 
    <ul>
      <li>HTML5</li>
       <li>CSS</li>
       <li>JavaScript</li>
     </ul>
   </li>  
-    <li> Back-end 
+    <li>**Back-end** 
    <ul>
      <li>Python</li>
      <li>Flask</li>
     </ul>
   </li> 
-      <li> Deployment
+      <li>**Deployment**
    <ul>
      <li>Heroku</li>
     </ul>
