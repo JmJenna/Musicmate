@@ -9,8 +9,13 @@
 # 🎵 What is Musicmate?
 ### Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. 
 
-# ⚙️ Deployment ( ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) )
-### This application is deployed on Heroku.
+# ⚙️ Technology stack ( ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white) )
+<ul>
+  <li> Front-end 
+     ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+     ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  </li>
+</ul>
 
 # 💾 Database schema ( ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)  )
 ![MusicMate database](https://user-images.githubusercontent.com/92393205/159342373-8fceab98-db0a-4156-b2c7-30d74641d71b.png)
