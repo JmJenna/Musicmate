@@ -24,25 +24,4 @@ headers = {"Authorization": "Bearer {}".format(access_token)}
 now = datetime.datetime.now()
 
 
-## Spotify Search API
-
-params = {
-    "q": "blackpink",
-    "type":"track",
-    "limit": "1"
-}
-
-r = requests.get("https://api.spotify.com/v1/search", params=params, headers=headers)
-
-rjson = r.json()
-
-trac = rjson["tracks"]["items"]
-
-
-playlist = requests.get("https://api.spotify.com/v1/playlists/6vDGVr652ztNWKZuHvsFvx",
-                        headers={"Content-Type":"application/json", "Authorization": "Bearer {}".format(access_token)})
-
-deepmusic_id = "6vDGVr652ztNWKZuHvsFvx"
-user_id = "ptrchyq2nqqbzfg55mzghjre1m"
-
 
