@@ -38,7 +38,7 @@
 
 
 # 💾 Database schema ( ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)  )
-<p> I used Spotify API for users to search music and add the song into their playlist. The song will be stored in Songs table, once users add the song. </p>
+<p> I used Spotify API for users to search music and add the song into their playlist. The song will be stored in Songs table, once users add it. </p>
 
 ![MusicMate database](https://user-images.githubusercontent.com/92393205/159374165-8c68c340-7000-4416-8b9b-4fa8285f6e90.png)
 
