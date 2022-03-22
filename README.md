@@ -8,7 +8,6 @@
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 <p> Back-end </p>
 
@@ -40,14 +39,11 @@
 <p> Users are free to join and leave any communities. They are allowed to see the posts by others joining the same community and create a post to share their song and thought,once they join in. </p>
 
 ### - How to enjoy joined communities
-<p> Users have to make their own playlist first before adding a post. They are able to add a post with a song from their playlist. A user can only like other’s post not his own post. Liked post will be saved in his liked list. All users can see the who have joined the community.  </p>
+<p> Users have to make their own playlist first before adding a post. They are able to add a post with a song from their playlist. A user can only like other’s post not his own post. Liked post will be saved in his liked list. All users can see who have joined the community by clikcing the members button. </p>
 
 ### - User's list
 <li> Profile : A user can edit and delete their profile </li>
 <li> Community : A user can go to his joined community </li>
 <li> Playist : A user can see the songs which he added from the search page </li>
-
-# 🗒 User flows 
-
 
 # 📷 Screenshots
