@@ -1,25 +1,21 @@
 # 🎶MusicMate
 [✅ MUSICMATE-URL ✅](http://musicmate-by-jenna.herokuapp.com/) 
-
-
-
-# 🎵 What is Musicmate?
 <p> Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. </p>
 
 
 # ⚙️ Technology stack 
-<p> Front-end </p>
+<h1> Front-end </h1>
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-<p> Back-end </p>
+<h1> Back-end </h1>
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 
-<p> Deployment </p>
+<h1> Deployment </h1>
 
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
