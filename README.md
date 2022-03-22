@@ -1,4 +1,4 @@
-# 🎶MusicMate
+# 🎶 MusicMate
 [✅ MUSICMATE-URL ✅](http://musicmate-by-jenna.herokuapp.com/) 
 <p> Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. </p>
 
@@ -20,12 +20,20 @@
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
 
-# 💾 Database schema ( ![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)  )
+# 💾 Database schema 
+![Spotify](https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white) 
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
 <p> I used Spotify API for users to search music and add the song into their playlist. The song will be stored in Songs table, once users add it. </p>
 
 ![MusicMate database](https://user-images.githubusercontent.com/92393205/159374165-8c68c340-7000-4416-8b9b-4fa8285f6e90.png)
 
 
+# 🔧 Features
+**Sign up/Log in**
+<p> Users have to sign up or log in to browse this website. Users’ information will be stored in the database, once they sign up. Only authenticated users can have access to this website. </p>
 
+**Search music/add it into playlist**
+<p> I authenticated Spotify API using Python requests. It allows users to search the music by artists or titles and add it into their playlist. </p>
 
 # 📷 Screenshots
