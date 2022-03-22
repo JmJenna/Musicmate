@@ -1,6 +1,6 @@
 # 🎶 MusicMate
 [✅ MUSICMATE-URL ✅](http://musicmate-by-jenna.herokuapp.com/) 
-<p> Musicmate is the community website intended to enable users who love the music to share songs from their playlist and communicate with others. </p>
+<p> Musicmate is the community website intended to enable users to share songs from their playlist and communicate with others. </p>
 
 
 # ⚙️ Technology stack 
@@ -30,10 +30,21 @@
 
 
 # 🔧 Features
-**Sign up/Log in**
-<p> Users have to sign up or log in to browse this website. Users’ information will be stored in the database, once they sign up. Only authenticated users can have access to this website. </p>
+**Sign up/Log in** 
+<p> Users have to sign up or log in to browse this website. Users’ information will be stored in the database,once they sign up. Only authenticated users can have an access to this website. </p>
 
-**Search music/add it into playlist**
-<p> I authenticated Spotify API using Python requests. It allows users to search the music by artists or titles and add it into their playlist. </p>
+**Search music/Add it into playlist**
+<p> Spotify API is authenticated using Python requests. It allows users to search the music by artists or titles and add it into their playlist. </p>
+
+**Join communities created by genre**
+<p> Users are free to join and leave any communities. They are allowed to see the posts by others joining the same community and create a post to share their song and thought,once they join in. </p>
+
+**How to enjoy joined communities**
+<p> Users are able to add a post with a song from their playlist. </p>
+
+**User's list**
+<li> Profile : A user can edit and delete their profile </li>
+<li> Community : A user can go to his joined community </li>
+<li> Playist : A user can see the songs which he added from the search page </li>
 
 # 📷 Screenshots
