@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/d8fd00a690.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/static/home.css">
+  <link rel="stylesheet" href="/static/first_page.css">
   <link rel="shortcut icon" type="image⁄x-icon" href="/static/images/logo.png">
+
   <title class="fa-solid fa-music">{% block title %}Welcome to MusicMate{% endblock %}</title>
 </head>
 
@@ -15,7 +17,7 @@
   <nav class="navbar">
     <div class="logo">
       <a href="/">
-        <i class="fa-solid fa-music">        
+        <i class="fa-solid fa-music">
         </i>
         <span>MusicMate</span>
       </a>
@@ -23,21 +25,21 @@
 
     <ul class="nav-menu">
 
-        <form action="/search" class="search">
-          <input type="text" placeholder="Search Music" name="artist" id="search-music">
-          <button class="search-btn-icon"><i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>          
-      
+      <form action="/search" class="search">
+        <input type="text" placeholder="Search Music" name="artist" id="search-music">
+        <button class="search-btn-icon"><i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
       {% if not g.user %}
-      <li>
+      <li class="hidden-nav">
         <a href="/signup" class="btn-a">SIGN UP</a>
       </li>
-      <li>
+      <li class="hidden-nav logout-nav">
         <a href="/login" class="btn-a">LOG IN</a>
       </li>
       {% else %}
-      <li class="topMenuLi">
+      <li class="topMenuLi hidden-nav">
         <a href="/" class="btn-a menulink"><i class="fa-solid fa-user"></i>
           {{ g.user.username.upper() }}
           <i class="fa-solid fa-sort-down"></i>
@@ -50,15 +52,14 @@
             <a href="/users/{{g.user.id}}/playlist">Playlist</a>
           </li>
         </ul>
-
       </li>
-      <li>
+      <li class="hidden-nav logout-nav">
         <a href="/logout" class="btn-a">LOG OUT</a>
       </li>
       {% endif %}
     </ul>
 
-    <a href="" class="navbar-toogleBtn">
+    <a href="#" class="navbar-toogleBtn">
       <i class="fas fa-bars"></i>
     </a>
   </nav>
@@ -79,7 +80,7 @@
       </div>
     </div>
   </footer>
-<script src="/static/app.js"></script>
+  <script src="/static/app.js"></script>
 </body>
 
 </html>

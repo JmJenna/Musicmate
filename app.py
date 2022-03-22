@@ -158,7 +158,7 @@ def one_community(com_id):
     usercommu = UserCommu.query.all()
     all_commu = Community.query.all()
 
-    return render_template('/community/first_page.html',all_commu = all_commu, community=community , posts=posts, user=user, likes=user.likes, usercommu=usercommu, songs=songs)  
+    return render_template('/community/first_page.html',all_commu=all_commu , community=community , posts=posts, user=user, likes=user.likes, usercommu=usercommu, songs=songs)  
     
 
 @app.route('/community/<int:com_id>/user/<int:user_id>/delete', methods=['GET','POST'])      
@@ -276,7 +276,7 @@ def search_song():
 
         res = requests.get(f'{SEARCH_URL}/search', params=params, headers=headers)
         data = res.json()
-        tracks= data["tracks"]["items"]
+        tracks = data["tracks"]["items"]
 
         user = session[CURR_USER_KEY]
 

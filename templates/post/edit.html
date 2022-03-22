@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="form-all">
-    <h2 class="form-text">Add your post</h2>
+    <h2 class="form-text">Edit your post</h2>
     <form method="POST" class="form-input">
         {{ form.hidden_tag() }}
 
@@ -15,7 +15,7 @@
         {% endfor %}
 
         {{ field.label(class="form-label") }}
-        {{field (placeholder=field.label.text, class="form-control") }}
+        {{field (placeholder=field.label.text, class="post-form-control") }}
         {% endfor %}
         <div class="post-btns-group">
             <a href="/community/{{post.commu_id}}" class="post-btns">Back</a>
