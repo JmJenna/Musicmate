@@ -8,6 +8,7 @@
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 <p> Back-end </p>
 
@@ -42,7 +43,7 @@
 <p> Users have to make their own playlist first before adding a post. They are able to add a post with a song from their playlist. A user can only like other’s post not his own post. Liked post will be saved in his liked list. All users can see who has joined the community by clikcing the members button. </p>
 
 ### - User's list
-<li> Profile : A user can edit and delete their profile </li>
+<li> Profile : A user can edit and delete his own profile </li>
 <li> Community : A user can go to his joined community </li>
 <li> Playlist : A user can see songs which he added from the search page </li>
 
