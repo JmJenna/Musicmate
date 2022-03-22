@@ -44,6 +44,6 @@
 ### - User's list
 <li> Profile : A user can edit and delete their profile </li>
 <li> Community : A user can go to his joined community </li>
-<li> Playist : A user can see the songs which he added from the search page </li>
+<li> Playlist : A user can see songs which he added from the search page </li>
 
 # 📷 Screenshots
