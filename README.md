@@ -47,3 +47,10 @@
 <li> Playlist : A user can see songs which he added from the search page </li>
 
 # 📷 Screenshots
+<img width="950" alt="2022-03-21 (5)" src="https://user-images.githubusercontent.com/92393205/159425349-5841c92b-c946-4de1-a813-ca0e0a82f6e2.png">
+
+<img width="952" alt="2022-03-21 (7)" src="https://user-images.githubusercontent.com/92393205/159425375-4a1a202a-563b-4be7-b9bc-93cf404c1db8.png">
+
+<img width="952" alt="2022-03-21 (6)" src="https://user-images.githubusercontent.com/92393205/159425391-679fe8e3-ea8e-4b71-a9b7-515db5519f33.png">
+
+<img width="946" alt="2022-03-21 (1)" src="https://user-images.githubusercontent.com/92393205/159425398-c9efd4f1-3a33-4b14-bf38-5cacfe4ad77c.png">
