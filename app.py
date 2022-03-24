@@ -2,6 +2,7 @@ import os
 import psycopg2
 from flask import Flask,abort, request, redirect, render_template , flash, redirect, session, g
 from sqlalchemy.exc import IntegrityError
+from werkzeug.exceptions import HTTPException
 
 from models import db, connect_db, User , Community , Post , Song , Playlist , UserCommu , Likes
 from form import UserAddForm , LoginForm , PostForm , ProfileForm
@@ -21,8 +22,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'chlwjdals492wjddbs')
 connect_db(app)
-
-
 
 ##############################################################################
 # User signup/login/logout
@@ -159,8 +158,7 @@ def one_community(com_id):
     all_commu = Community.query.all()
 
     return render_template('/community/first_page.html',all_commu=all_commu , community=community , posts=posts, user=user, likes=user.likes, usercommu=usercommu, songs=songs)  
-    
-
+        
 @app.route('/community/<int:com_id>/user/<int:user_id>/delete', methods=['GET','POST'])      
 def unjoin_community(user_id, com_id):
     """Delete a post"""
@@ -183,7 +181,6 @@ def show_all_users(com_id):
     users = commu.users
 
     return render_template('/user/list_users.html', commu=commu , users=users)
-
 
 ##############################################################################
 # Handle posts (Users can upload , edit and delete posts)
@@ -212,14 +209,11 @@ def add_post(commu_id):
         db.session.add(new_post)
         db.session.commit()
 
-
         return redirect(f"/community/{commu_id}")
 
     else:
 
-        return render_template('/post/add.html', form=form , commu=commu)    
-      
-
+        return render_template('/post/add.html', form=form , commu=commu)          
 
 @app.route('/posts/<int:post_id>/edit' , methods=["GET", "POST"])
 def edit_post(post_id):
@@ -241,7 +235,6 @@ def edit_post(post_id):
 
     else:
         return render_template('/post/edit.html', form=form , post=post)
-
 
 @app.route('/posts/<int:post_id>/community/<int:com_id>/delete', methods=["GET","POST"])
 def delete_post(post_id, com_id):
@@ -301,7 +294,6 @@ def search_song():
             db.session.add(playlist)
             db.session.commit()
 
-    
         return render_template('user/search.html', tracks=tracks , user=user , q=q)
 
 ##############################################################################
@@ -358,7 +350,6 @@ def delete_song(user_id, song_id):
     
     return redirect(f"/users/{user.id}/playlist")
 
-
 ##############################################################################
 # LIKE
 
@@ -403,7 +394,6 @@ def add_like(post_id):
 
     return redirect(f"/community/{liked_post.communities.id}")
   
-
 ##############################################################################
 # Handle user profile
 @app.route('/users/<int:user_id>/profile', methods=['GET','POST'])
@@ -442,6 +432,20 @@ def delete_user(user_id):
     db.session.commit()
 
     return redirect("/signup")
+
+##############################################################################
+# Homepage Error
+#
+# https://flask.palletsprojects.com/en/2.0.x/errorhandling/
+
+@app.errorhandler(Exception)
+def handle_exception(e):
+    # pass through HTTP errors
+    if isinstance(e, HTTPException):
+        return e
+
+    # now you're handling non-HTTP exceptions only
+    return render_template("500.html", e=e), 500
 
 ##############################################################################
 # Homepage 

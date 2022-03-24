@@ -274,7 +274,7 @@ footer {
 
 .post-form-control{   
   margin-bottom: 25px;
-  width: 800px;
+  width: 450px;
   height: auto;
   border: none;
   padding: 5px;
@@ -488,7 +488,15 @@ footer {
     font-size: 4vh;
     color: var(--text-color);
 } 
- 
+
+.error-msg{
+    margin: 15px;
+    align-items: center;
+}
+
+.error-msg a{
+    font-size: 25px;
+}
 
 @media screen and ( max-width: 768px ) {
     .navbar{
@@ -503,7 +511,8 @@ footer {
     }
 
     .nav-menu li{
-        padding-left: 0px;
+        padding-top:20px;
+        padding-right: 90px;
         width: 100%;
     }
 
@@ -564,7 +573,7 @@ footer {
     }
 
     .post-form-control{
-        width: 480px;
+        width: 430px;
     }
 
     .form-all{
@@ -577,6 +586,7 @@ footer {
     }
 
     .show-playlist-group{
+        display: block;
         flex-direction: column;
         flex-wrap: nowrap;
         width: 100%;
@@ -585,7 +595,7 @@ footer {
     .show-playlist{
         flex-direction: row;
         width: auto;
-        height: 320px;
+        height: auto;
         justify-content: flex-start;
     }
 
@@ -612,7 +622,7 @@ footer {
     }
 
     .form-all{
-        width: 350px;
+        width: 410px;
     }
 
     .form-text{

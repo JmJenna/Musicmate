@@ -32,7 +32,7 @@
 
             {% for u in user.communities %}
             {% if u.genre == community.genre %}
-            <li class="add-post-btn"> <a href="/community/{{community.id}}/posts/add">Add Post</a> </li>
+            <li class="add-post-btn-hidden"> <a href="/community/{{community.id}}/posts/add">Add Post</a> </li>
             {% endif %}
             {% endfor %}
         </div>
