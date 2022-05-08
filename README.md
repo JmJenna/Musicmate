@@ -40,7 +40,7 @@
 <p> Users are free to join and leave any communities. They are allowed to see the posts by others joining the same community and create a post to share their song and thought,once they join in. </p>
 
 ### - How to enjoy joined communities
-<p> Users have to make their own playlist first before adding a post. They are able to add a post with a song from their playlist. A user can only like other’s post not his own post. Liked post will be saved in his liked list. All users can see who has joined the community by clikcing the members button. </p>
+<p> Users have to make their own playlist first before adding a post. They are able to add a post with a song from their playlist. A user can only like other’s post not his own post. Liked post will be saved in his liked list. All users can see who has joined the community by clicking the members button. </p>
 
 ### - User's list
 <li> Profile : A user can edit and delete his own profile </li>
